@@ -1,0 +1,92 @@
+<%= form_with(model: report, local: true) do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+        <% report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= form.label :student_name %>
+    <%= form.text_field :student_name %>
+  </div>
+
+  <div class="field">
+
+  <table>
+  <tr>
+  <td>
+    <%= form.label :course %>
+    <%= form.number_field :course %>
+  </td>
+  <td>
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+</td>
+  <td>
+    <%= form.label :unit %>
+    <%= form.number_field :unit %>
+ </td>
+  <td>
+    <%= form.label :classroom %>
+    <%= form.number_field :classroom %>
+  </td>
+  </tr>
+  </table>
+  </div>
+
+  <div class="field">
+
+  <table>
+  <tr>
+  <td>
+    <%= form.label :greeting %>
+    <%= form.number_field :greeting %>
+  </td>
+  <td>
+    <%= form.label :salutation %>
+    <%= form.number_field :salutation %>
+  </td>
+  </tr>
+  </table>
+  </div>
+
+  <div class="field">
+
+  <table>
+  <tr>
+  <td>
+    <%= form.label :scored_lead_0 %>
+    <%= form.text_field :scored_lead_0 %>
+  </td>
+  <td>
+    <%= form.label :scored_lead_1 %>
+    <%= form.text_field :scored_lead_1 %>
+  </td>
+  <td>
+    <%= form.label :scored_lead_2 %>
+    <%= form.text_field :scored_lead_2 %>
+  </td>
+  <td>
+    <%= form.label :scored_lead_3 %>
+    <%= form.text_field :scored_lead_3 %>
+</td>
+  <td>
+    <%= form.label :scored_lead_4 %>
+    <%= form.text_field :scored_lead_4 %>
+ 
+  </td>
+  </tr>
+  </table>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

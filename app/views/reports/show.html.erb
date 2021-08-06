@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @report.course %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @report.level %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @report.unit %>
+</p>
+
+<p>
+  <strong>Classroom:</strong>
+  <%= @report.classroom %>
+</p>
+
+<p>
+  <strong>Student name:</strong>
+  <%= @report.student_name %>
+</p>
+
+<p>
+  <strong>Scored lead 0:</strong>
+  <%= @report.scored_lead_0 %>
+</p>
+
+<p>
+  <strong>Scored lead 1:</strong>
+  <%= @report.scored_lead_1 %>
+</p>
+
+<p>
+  <strong>Scored lead 2:</strong>
+  <%= @report.scored_lead_2 %>
+</p>
+
+<p>
+  <strong>Scored lead 3:</strong>
+  <%= @report.scored_lead_3 %>
+</p>
+
+<p>
+  <strong>Scored lead 4:</strong>
+  <%= @report.scored_lead_4 %>
+</p>
+
+<p>
+  <strong>Greeting:</strong>
+  <%= @report.greeting %>
+</p>
+
+<p>
+  <strong>Salutation:</strong>
+  <%= @report.salutation %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
