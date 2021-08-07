@@ -80,6 +80,11 @@ test:
 #
 production:
   <<: *default
-  database: ela_production
-  username: ela
-  password: <%= ENV['ELA_DATABASE_PASSWORD'] %>
+  database: odb
+  username: wb
+  password: <%= ENV['ODB_DATABASE_PASSWORD'] %>
+
+heroku:
+  adapter: postgresql
+  encoding: utf8
+  pool: 15
