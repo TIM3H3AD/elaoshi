@@ -80,8 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: d9l32h2vjv63r2
-  user: valwuyqzsrrbmh
   password: <%= ENV['ODB_DATABASE_PASSWORD'] %>
 
 heroku:
