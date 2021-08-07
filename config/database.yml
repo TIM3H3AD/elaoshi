@@ -78,11 +78,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+ production:
+#     url: <%= ENV['MY_APP_DATABASE_URL'] %>
+#
+# Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
+# for a full overview on how database connection configuration can be specified.
+#
 production:
   <<: *default
-  password: <%= ENV['ODB_DATABASE_PASSWORD'] %>
-
-heroku:
-  adapter: postgresql
-  encoding: utf8
-  pool: 15
+  database: ela_production
+  username: elaoshi
+  password: <%= ENV['ELAOSHI_DATABASE_PASSWORD'] %>
